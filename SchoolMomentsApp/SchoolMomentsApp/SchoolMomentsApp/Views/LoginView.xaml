@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchoolMomentsApp.Views.LoginView"
+             xmlns:utility="clr-namespace:SchoolMomentsApp.Utility;assembly=SchoolMomentsApp"
+             utility:ViewModelLocator.AutoWireViewModel="True">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Entry x:Name="Number" Placeholder="PersonellNumber" Text="{Binding PersonelNumber, Mode=OneWayToSource}"/>
+                <Entry x:Name="Password" IsPassword="True" Placeholder="Password" Text="{Binding Password, Mode=OneWayToSource}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding ErrorMessage}"/>
+                <Button Text="Login" Command="{Binding Login}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

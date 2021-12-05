@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchoolMomentsApp.Views.MomentDetailView"
+             xmlns:utility="clr-namespace:SchoolMomentsApp.Utility;assembly=SchoolMomentsApp"
+             utility:ViewModelLocator.AutoWireViewModel="True">
+    <ContentPage.Content>
+        <StackLayout>
+        <StackLayout>
+            <!--<StackLayout BindingContext="Moment">-->
+            <Label Text="{Binding Moment.Name}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Moment.Category}"/>
+            <Label Text="{Binding Moment.DateTime}"/>
+            <Label Text="{Binding Moment.Duration}"/>
+
+        </StackLayout>
+        <!--<StackLayout>
+            <Button Text="Attending Students" Command="{Binding LoadAttendedStudents}"/>
+            <Button Text="Requested Students" Command="{Binding LoadRequestedStudents}"/>
+            <Button Text="Absent Students" Command="{Binding LoadAbsentStudents}"/>
+            <Button Text="Register Student" Command="{Binding RegisterStudent}"/>
+        </StackLayout>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

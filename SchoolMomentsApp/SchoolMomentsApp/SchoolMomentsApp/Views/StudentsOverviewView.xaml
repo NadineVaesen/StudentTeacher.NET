@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchoolMomentsApp.Views.StudentsOverviewView"
+             xmlns:utility="clr-namespace:SchoolMomentsApp.Utility;assembly=SchoolMomentsApp"
+             utility:ViewModelLocator.AutoWireViewModel="True">
+    <ListView x:Name="StudentsOverview"
+            ItemsSource="{Binding Students}"
+            CachingStrategy="RecycleElement">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="{Binding StudentNumber}"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding FirstName}"/>
+                            <Label Text="{Binding LastName}"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

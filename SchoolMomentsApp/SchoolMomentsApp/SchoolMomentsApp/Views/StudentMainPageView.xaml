@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchoolMomentsApp.Views.StudentMainPageView"
+             xmlns:utility="clr-namespace:SchoolMomentsApp.Utility;assembly=SchoolMomentsApp"
+             utility:ViewModelLocator.AutoWireViewModel="True">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Show Absences" Command="{Binding LoadAbsences}"/>
+            <Button Text="Show Presences" Command="{Binding LoadPresences}"/>
+            <Button Text="Show My QR code" Command="{Binding ShowQRCode}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
